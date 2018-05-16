@@ -1,0 +1,9 @@
+.idea
+.idea/
+.DS_Store
+bower_components
+components
+node_modules
+pages/emails
+src
+templates
