@@ -1451,9 +1451,12 @@ footer {
 
 .section-5 {
   position: relative;
-  padding: 60px 0 80px;
+  padding: 60px 0 120px;
   background-color: #1878DC;
   z-index: 2; }
+  @media only screen and (max-width: 1199px) {
+    .section-5 {
+      padding: 60px 0 100px; } }
   .section-5 .top-wave {
     position: absolute;
     bottom: 100%;
