@@ -163,9 +163,12 @@
 .hero-carousel {
   height: 900px;
   margin-top: -1px; }
+  @media only screen and (max-width: 1199px) {
+    .hero-carousel {
+      background-color: #F0F4F7; } }
   @media only screen and (max-width: 767px) {
     .hero-carousel {
-      margin-bottom: 30px;
+      padding-bottom: 60px;
       min-height: 900px;
       height: auto; } }
   @media only screen and (max-width: 767px) {
@@ -247,7 +250,7 @@
     @media only screen and (max-width: 1199px) {
       .hero-carousel .carousel-item-caption {
         top: 0;
-        padding-top: 840px;
+        padding-top: 800px;
         left: 0;
         -webkit-transform: none;
                 transform: none; } }
@@ -318,7 +321,7 @@
   position: absolute;
   top: 0;
   left: 50%;
-  width: 48px;
+  width: 23px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   -webkit-animation: nudgeMouse 5.5s ease-out infinite;
@@ -327,7 +330,7 @@
 .mouse:after {
   content: "";
   position: absolute;
-  top: 0;
+  top: -30%;
   left: 50%;
   margin-left: -3px;
   background-color: #fff;
@@ -849,35 +852,11 @@ header {
   @media only screen and (max-width: 1199px) {
     .navbar-brand {
       width: 119px;
+      height: 49px;
       margin-right: 0; } }
   .navbar-brand img {
     flex-shrink: 0;
     width: 100%; }
-
-#toggle {
-  width: 18px;
-  height: 20px; }
-
-#toggle div {
-  width: 100%;
-  height: 2px;
-  background-color: #003764;
-  margin: 4px auto;
-  transition: all 0.3s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
-
-#toggle.on .one {
-  -webkit-transform: rotate(45deg) translate(5px, 5px);
-          transform: rotate(45deg) translate(5px, 5px); }
-
-#toggle.on .two {
-  opacity: 0; }
-
-#toggle.on .three {
-  margin-top: 10px;
-  -webkit-transform: rotate(-45deg) translate(8px, -8px);
-          transform: rotate(-45deg) translate(8px, -8px); }
 
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-toggler {
@@ -995,7 +974,7 @@ header {
     .header-top-panel .navbar-brand {
       padding: 0; }
     .header-top-panel .navbar-brand, .header-top-panel .navbar-brand img {
-      height: 42px;
+      height: 49px;
       width: 149px; } }
 
 @media (max-width: 767px) {
@@ -1004,17 +983,13 @@ header {
 
 footer {
   background-color: #062958;
-  position: relative; }
-  footer:after {
-    content: '';
+  position: relative;
+  z-index: 2; }
+  footer .top-wave {
     position: absolute;
+    bottom: 100%;
     left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../images/round-dark-top-bg.svg") center no-repeat;
-    background-size: cover;
-    background-position: 0 0; }
+    right: 0; }
   footer > div, footer > div ~ div {
     position: relative;
     z-index: 4; }
@@ -1255,70 +1230,42 @@ footer {
   position: relative;
   height: 300px;
   background-color: #f0f4f7;
+  background: url("../../images/wave-search-bg.jpg") center no-repeat;
+  background-size: cover;
   z-index: 1; }
-  .section-1:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../images/white-wave-bg.svg") center no-repeat;
-    background-size: cover;
-    background-position: 0 80px; }
-  .section-1:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../images/light-blue-wave-bg.svg") center no-repeat;
-    background-size: cover;
-    background-position: 0 50px;
-    z-index: 2; }
   .section-1 > div {
     position: relative;
     z-index: 4; }
 
 .section-2 {
   background-color: #062958;
-  padding: 80px 0;
+  padding-bottom: 40px;
   position: relative;
-  z-index: 1; }
-  .section-2:after {
-    content: '';
+  z-index: 2; }
+  .section-2 .top-wave {
     position: absolute;
+    bottom: 100%;
     left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../images/dark-wave-top-bg.svg") center no-repeat;
-    background-size: cover;
-    background-position: 0 0; }
-  .section-2:before {
-    content: '';
+    right: 0; }
+  .section-2 .bottom-wave {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../images/dark-wave-bottom-bg.svg") center no-repeat;
-    background-size: cover;
-    background-position: 0 100%;
-    z-index: 2; }
+    top: calc(100% - 1px);
+    left: 0;
+    right: 0; }
   .section-2 > div {
     position: relative;
     z-index: 4; }
   .section-2 .graph {
     position: relative;
     border-radius: 40px;
-    background: linear-gradient(0deg, rgba(9, 55, 108, 0) 0%, #09376C 100%);
+    background: linear-gradient(0deg, #09376c 0%, #09376C 100%);
     padding: 45px;
     margin-top: -80px; }
     @media only screen and (max-width: 1199px) {
       .section-2 .graph {
-        padding: 30px 10px 10px; } }
+        padding: 30px 10px 10px;
+        margin-top: -30px;
+        border-radius: 20px; } }
     .section-2 .graph .left-numbers {
       position: absolute;
       right: calc(100% + 60px);
@@ -1330,19 +1277,12 @@ footer {
 
 .section-3 {
   background-color: #F0F4F7;
-  padding: 70px 0;
+  padding: 70px 0 120px;
   position: relative;
   z-index: 1; }
-  .section-3:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../images/white-wave-bg1.svg") center no-repeat;
-    background-size: cover;
-    background-position: 0 0; }
+  @media only screen and (max-width: 1199px) {
+    .section-3 {
+      padding: 30px 0 80px; } }
   .section-3 > div {
     position: relative;
     z-index: 4; }
@@ -1438,19 +1378,14 @@ footer {
 
 .section-4 {
   position: relative;
-  padding: 80px 0 0;
+  padding: 30px 0 0;
   background-color: #E3ECF5;
   z-index: 1; }
-  .section-4:after {
-    content: '';
+  .section-4 .top-wave {
     position: absolute;
+    bottom: 100%;
     left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../images/wave-top-bg.svg") center no-repeat;
-    background-size: cover;
-    background-position: 0 0; }
+    right: 0; }
   .section-4 > div {
     position: relative;
     z-index: 4; }
@@ -1516,10 +1451,14 @@ footer {
 
 .section-5 {
   position: relative;
-  padding: 110px 0;
+  padding: 60px 0 80px;
   background-color: #1878DC;
-  z-index: 1;
-  overflow: hidden; }
+  z-index: 2; }
+  .section-5 .top-wave {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0; }
   .section-5:after {
     content: '';
     position: absolute;
