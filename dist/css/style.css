@@ -161,7 +161,7 @@
     text-decoration: underline; }
 
 .hero-carousel {
-  height: 900px;
+  height: 960px;
   margin-top: -1px; }
   @media only screen and (max-width: 1199px) {
     .hero-carousel {
@@ -185,12 +185,12 @@
     height: 38px;
     width: 12px; }
   .hero-carousel .carousel-item {
-    height: 900px; }
+    height: 960px; }
     @media only screen and (max-width: 767px) {
       .hero-carousel .carousel-item {
         height: 500px; } }
     .hero-carousel .carousel-item > img {
-      height: 900px;
+      height: 960px;
       width: auto;
       margin: 0 auto;
       position: absolute;
@@ -212,11 +212,12 @@
     align-items: center; }
     @media only screen and (max-width: 1199px) {
       .hero-carousel .bc-course {
-        margin-left: 0 !important;
-        background-color: #062958; } }
-    @media only screen and (max-width: 767px) {
+        background-color: #062958;
+        margin: 0 auto; } }
+    @media only screen and (max-width: 543px) {
       .hero-carousel .bc-course {
-        width: 100%; } }
+        width: 100%;
+        margin-left: 0 !important; } }
     .hero-carousel .bc-course .bt-icon {
       margin-right: 20px; }
     .hero-carousel .bc-course .price {
@@ -246,7 +247,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    padding-top: 120px; }
+    padding-top: 260px; }
     @media only screen and (max-width: 1199px) {
       .hero-carousel .carousel-item-caption {
         top: 0;
@@ -312,7 +313,7 @@
 
 .mouse-wrap {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 50%;
   -webkit-transform: translate(-80%, -50%);
           transform: translate(-80%, -50%); }
@@ -822,11 +823,6 @@ nav.navbar {
         .pills-tabs .nav.nav-pills .nav-link.active:after {
           display: none; } }
 
-@media only screen and (max-width: 767px) {
-  .pills-tabs .tab-content .tab-pane {
-    display: block !important;
-    opacity: 1 !important; } }
-
 header {
   position: relative; }
 
@@ -903,10 +899,12 @@ header {
     .header-top-panel .buttons-panel .dropdown > .button:after {
       display: none; }
     .header-top-panel .buttons-panel .dropdown #dropdownMenu2 ~ .dropdown-menu {
-      left: -30px; }
+      left: -22px; }
       @media only screen and (max-width: 1199px) {
         .header-top-panel .buttons-panel .dropdown #dropdownMenu2 ~ .dropdown-menu {
-          left: 15px; } }
+          left: 50%;
+          -webkit-transform: translate(-50%, 0);
+                  transform: translate(-50%, 0); } }
     .header-top-panel .buttons-panel .dropdown #dropdownMenu1 ~ .dropdown-menu {
       left: auto;
       right: 0; }
@@ -927,7 +925,7 @@ header {
         content: '';
         position: absolute;
         bottom: 100%;
-        left: 30%;
+        left: 26%;
         border: 9px solid transparent;
         border-bottom: 9px solid #fff; }
       .header-top-panel .buttons-panel .dropdown .dropdown-menu .form-buttons {
@@ -1356,14 +1354,14 @@ footer {
     display: flex;
     justify-content: flex-end;
     margin-top: 40px; }
-    @media only screen and (max-width: 1199px) {
+    @media only screen and (max-width: 767px) {
       .section-3 .right-buttons {
         display: block;
         text-align: center;
         margin-top: 20px; } }
     .section-3 .right-buttons .team-img {
       margin-right: 30px; }
-      @media only screen and (max-width: 1199px) {
+      @media only screen and (max-width: 767px) {
         .section-3 .right-buttons .team-img {
           display: block;
           margin: 0 auto 40px; } }
@@ -1398,6 +1396,12 @@ footer {
       background-color: #6CA7E4; }
   .section-4 #carouselExampleIndicators2 {
     height: 330px; }
+    @media only screen and (max-width: 991px) {
+      .section-4 #carouselExampleIndicators2 {
+        height: auto; } }
+    @media only screen and (max-width: 767px) {
+      .section-4 #carouselExampleIndicators2 {
+        height: 330px; } }
   .section-4 .person {
     border-radius: 6px;
     background-color: #FBFCFC;
